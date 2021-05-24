@@ -1,0 +1,16 @@
+{
+  "name": "linkedin_req_accepter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "start": "nodemon linkedin.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.7",
+    "puppeteer": "^9.1.1"
+  }
+}
