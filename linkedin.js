@@ -1,4 +1,6 @@
 const puppeteer = require(`puppeteer`)
+const dotenv = require('dotenv');
+dotenv.config();
 
 const app = async() => {
 
@@ -27,14 +29,12 @@ const app = async() => {
 // ================= login username & password ==============================================
     await page.waitForSelector(`#session_key`)
 
-    // put your username-                      :here
-    await page.type(`#session_key`,      `Your_email_here`)
-    
-    // put your password-                      :here
-    await page.type(`#session_password`, `Your_Password_here`)
+    // TYPING USERNAME AND PASSWORD
+    await page.type(`#session_key`,`${process.env.USER}`)
+    await page.type(`#session_password`, `${process.env.PASSWORD}`)
    
 
-    // clicking on signin button
+    // clicking on SIGNIN button
     await page.click(`.sign-in-form__submit-button`)
     console.log(`login successful`);
 
@@ -55,10 +55,10 @@ const app = async() => {
 
 //======================= closing chatting tab===============================================
 //                                     ---Your Linkedin Name here---
-    await page.waitForSelector(`img[title="Your Linkedin FullName"]`)
+    await page.waitForSelector(`img[title="Your Linkedin Name"]`)
     try {
 //                                  ---Your Linkedin Name here---
-        await page.click(`img[title="Your Linkedin FullName"]`)        
+        await page.click(`img[title="Your Linkedin Name"]`)        
     } finally {
         console.log(`chatting tab closed`);
     }
@@ -67,7 +67,7 @@ const app = async() => {
 
 
 // ======================see-all(button)=====================================================  
-    // waiting for see-all button to load
+    // waiting for see-all Button to load
     await page.waitForSelector(`a[data-control-name="manage_all_invites"]`);
     await page.click(`a[data-control-name="manage_all_invites"]`)
     console.log(`see all got clicked`);

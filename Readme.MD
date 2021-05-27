@@ -1,13 +1,14 @@
 <div align="center">
-  
+
 ![f8da2e3f2edd4c2eb6f039f732eb64aa](https://user-images.githubusercontent.com/59140343/119865381-3cdba200-bf39-11eb-9f5c-2af84871b993.png)
-  
+
 </div>
+
 <h1 align="center">Au2linkedin</h1>
 
 ## Getting started with linkedin request accepter
 
-- This is a CLI, to accept all linkedin connection requests in few seconds.
+- This is a CLI, to accept all linkedin connection requests in few seconds. If you have slow internet connetion then this might not work, try to re-run the programme by <code>rs</code>
 
 ## Setting up Code
 
@@ -32,12 +33,12 @@ npm start
 
 ## How to Use Au2linkedin
 
-- <Strong>This code snippet dosent save your password or any important information.</strong>
+- <Strong>This code snippet doesn't save your password or any important information.</strong>
+
 - You have to write your name inside the fields mentioned in the <code>linkedin.js</code> file.
-- Line 22 contains your linkedin email and line25 contains your linkedin password
-- ![Screenshot (83)](https://user-images.githubusercontent.com/59140343/119835045-1bb98800-bf1e-11eb-9cec-f70f5ab9700c.png)
-- ![Screenshot (82)](https://user-images.githubusercontent.com/59140343/119835084-22e09600-bf1e-11eb-826f-72440b5a6f45.png)
 
-- It is totally safe i tried to explain every single line and what it does.
+- It is totally safe to use, I tried to explain every single line and what it does.
 
-<strong>This will also download puppeteer package which is more than 160mb.</strong>
+- add your USER name and PASSWORD in env file...
+
+<strong>This will also download puppeteer package, which also downloads chromium which is headless browser and it is more than 160mb.</strong>
