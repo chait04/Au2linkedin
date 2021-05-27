@@ -30,6 +30,9 @@ npm start
 - <Strong>This code snippet dosent save your password or any important information.</strong>
 - You have to write your name inside the fields mentioned in the <code>linkedin.js</code> file.
 - Line 22 contains your linkedin email and line25 contains your linkedin password
+- ![Screenshot (83)](https://user-images.githubusercontent.com/59140343/119835045-1bb98800-bf1e-11eb-9cec-f70f5ab9700c.png)
+- ![Screenshot (82)](https://user-images.githubusercontent.com/59140343/119835084-22e09600-bf1e-11eb-826f-72440b5a6f45.png)
+
 - It is totally safe i tried to explain every single line and what it does.
 
 <strong>This will also download puppeteer package which is more than 160mb.</strong>
