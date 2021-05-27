@@ -40,5 +40,6 @@ npm start
 - It is totally safe to use, I tried to explain every single line and what it does.
 
 - add your USER name and PASSWORD in env file...
+-  ![Screenshot (84)](https://user-images.githubusercontent.com/59140343/119882069-99e05380-bf4b-11eb-99d6-0b1abb546b70.png)
 
 <strong>This will also download puppeteer package, which also downloads chromium which is headless browser and it is more than 160mb.</strong>
