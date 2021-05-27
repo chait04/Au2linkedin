@@ -2,6 +2,9 @@ const puppeteer = require(`puppeteer`)
 
 const app = async() => {
 
+    // If you dont want this programme to open sepearate window for automation then remove below code
+    // Remove The object from launch function if (needed)
+    
     const browser = await puppeteer.launch({
         headless: false,
         ignoreDefaultArgs: ["--enable-automation"]
@@ -11,11 +14,14 @@ const app = async() => {
     // This line makes the newPage full screen
     await page._client.send("Emulation.clearDeviceMetricsOverride")
 
+    // setting user agent so linkedin not gonna think we are bot or something else
+    await page.setUserAgent(`Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36`)
+
     // Navigating to linkedin
     await page.goto(`https://www.linkedin.com/`)
     
 
-// ================= login username & password =============================  
+// ================= login username & password ==============================================
     await page.waitForSelector(`#session_key`)
 
     // put your username-                      :here
@@ -24,12 +30,9 @@ const app = async() => {
     // put your password-                      :here
     await page.type(`#session_password`, `Your_Password_here`)
    
-
-
-    // clicking on signon button
+    // clicking on signin button
     await page.click(`.sign-in-form__submit-button`)
     console.log(`login successful`);
-
 
 
     // calling waitForTimeout to wait for everything to load on web page
@@ -45,28 +48,26 @@ const app = async() => {
     console.log(`network tab opened`);
 
 
-
-//======================= closing chatting tab================================
+//======================= closing chatting tab===============================================
 //                                     ---Your Linkedin Name here---
-    await page.waitForSelector(`img[title="Chaitanya Khachane"]`)
+    await page.waitForSelector(`img[title="Your Linkedin FullName"]`)
     try {
-        await page.click(`img[title="Chaitanya Khachane"]`)        
+//                                  ---Your Linkedin Name here---
+        await page.click(`img[title="Your Linkedin FullName"]`)        
     } finally {
         console.log(`chatting tab closed`);
     }
 
 
 
-// ======================see-all(button)==============================================
-
-    // wating for see-all button to load
+// ======================see-all(button)=====================================================  
+    // waiting for see-all button to load
     await page.waitForSelector(`a[data-control-name="manage_all_invites"]`);
     await page.click(`a[data-control-name="manage_all_invites"]`)
     console.log(`see all got clicked`);
     
 
-
-//============================== Main functionality=========================================
+//============================== Main functionality==========================================
     // The evaluate function runs the below code in that browser
     try {
         await page.evaluate(() => {
@@ -83,5 +84,3 @@ const app = async() => {
 }
 
 app()
-
-

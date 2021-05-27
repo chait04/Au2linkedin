@@ -1,11 +1,35 @@
-## Getting stated with linkedin request accepter
+<h1 align="center">Au2linkedin</h1>
 
-- npm i
+## Getting started with linkedin request accepter
 
-#### This will install all dependencies which required to run the file...
+- This is a CLI, to accept all linkedin connection requests in few seconds.
 
-<strong>This will also download puppeteer package which is more than 110mb.</strong>
+## Setting up Code
 
-- Update your linkedin username and password in code.. Dont worry its safe...
+1. Clone this repository
 
-#### Thats it you're good to go
+```bash
+git clone git@github.com:chait04/Au2linkedin.git
+cd Au2linkedin
+```
+
+2. Install dependencies
+
+```bash
+npm install
+```
+
+3. Run the code
+
+```bash
+npm start
+```
+
+## How to Use Au2linkedin
+
+- <Strong>This code snippet dosent save your password or any important information.</strong>
+- You have to write your name inside the fields mentioned in the <code>linkedin.js</code> file.
+- Line 22 contains your linkedin email and line25 contains your linkedin password
+- It is totally safe i tried to explain every single line and what it does.
+
+<strong>This will also download puppeteer package which is more than 160mb.</strong>
