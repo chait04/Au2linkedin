@@ -42,4 +42,7 @@ npm start
 - add your USER name and PASSWORD in env file...
 -  ![Screenshot (84)](https://user-images.githubusercontent.com/59140343/119882069-99e05380-bf4b-11eb-99d6-0b1abb546b70.png)
 
+- Add your linkedin FullName in the given fields (<code>One line 58 abd line 61 </code>). 
+- ![Screenshot (86)](https://user-images.githubusercontent.com/59140343/119950934-09d8f300-bfb9-11eb-997b-316e125994c0.png)
+
 <strong>This will also download puppeteer package, which also downloads chromium which is headless browser and it is more than 160mb.</strong>
